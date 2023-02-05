@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap');
+
+:root {
+    --main-font: 'Dosis', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 10% auto;
+    align-items: center;
+}
+
+h1 {
+    font-family: var(--main-font);
+    font-weight: bold;
+}
+
+.action {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    width: 50%;
+    justify-content: center;
+    font-family: var(--main-font);
+}
+
+    .action .add {
+        border: 2px solid #000;
+        height: 30px;
+        width: 74%;
+        padding: 3%;
+        font-family: var(--main-font);
+        font-size: 1.5rem;
+    }
+
+    .action button {
+        background-color: #fff;
+        border: 2px solid #000;
+        width: 24%;
+        font-family: var(--main-font);
+        font-weight: bold;
+        font-size: 1.5rem;
+        transition: .3s ease-in;
+    }
+
+    .action button:hover {
+        background-color: #000;
+        color: #fff;
+        transition: .3s ease-in;
+    }
+
+.list {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    width: 50%;
+    align-items: center;
+    font-family: var(--main-font);
+}
+
+    .list .card {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 2%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card #done {
+        width: 32px;
+        height: 32px;
+    }        
+
+    .card .plan {
+        width: 93%;
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    .card #deleteButton {
+        border: none;
+        border-radius: 3px;
+        background: transparent;
+        width: 5%;
+        height: 30px;
+        font-family: var(--main-font);
+        font-size: 1.2rem;
+        color: #f00;
+        font-weight: bold;
+        transition: .3s ease-in;
+    }
+
+    .card #deleteButton:hover {
+        color: #fff;
+        background: #f00;
+        transition: .3s ease-in;
+    }
+
+        .done {
+            color: #26ff31;
+            text-decoration: line-through;
+        }
