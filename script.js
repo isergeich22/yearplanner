@@ -19,9 +19,12 @@ function createCard(text) {
 
     if (text == '') {
         input.classList.toggle('invalid')
+        const label = document.querySelector('#tooltip')
+        label.style.display = 'flex'
 
         setTimeout(() => {
             input.classList.remove('invalid')
+            label.style.display = 'none'
         }, 3000)
     } else {
 

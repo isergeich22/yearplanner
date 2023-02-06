@@ -33,18 +33,31 @@ h1 {
     font-family: var(--main-font);
 }
 
-    .action .add {
-        border: 2px solid #000;
-        height: 30px;
+    .action .input {
+        display: flex;
+        flex-direction: column;
+        height: 35px;
         width: 74%;
-        padding: 3%;
-        font-family: var(--main-font);
-        font-size: 1.5rem;
     }
+
+        .input .add {
+            border: 2px solid #000;
+            height: 30px;
+            padding: 3%;
+            font-family: var(--main-font);
+            font-size: 1.5rem;
+            transition: .3s ease-in;
+        }
+
+        .input label {
+            display: none;
+            color: #ff7777;
+        }
 
     .action button {
         background-color: #fff;
         border: 2px solid #000;
+        height: 38px;
         width: 24%;
         font-family: var(--main-font);
         font-weight: bold;
@@ -59,7 +72,8 @@ h1 {
     }
 
         .invalid {
-            background: rgba(255, 119, 119, 0.479);
+            background: #ffb0b07a;
+            transition: .3s ease-in;
         }
 
 .list {
