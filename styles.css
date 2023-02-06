@@ -58,6 +58,10 @@ h1 {
         transition: .3s ease-in;
     }
 
+        .invalid {
+            background: rgba(255, 119, 119, 0.479);
+        }
+
 .list {
     margin-top: 3%;
     display: flex;

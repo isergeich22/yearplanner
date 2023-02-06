@@ -17,17 +17,27 @@ button.addEventListener('click', () => {
 
 function createCard(text) {
 
-    const newPlan = {
-        plan_name: text,
-        done: false
+    if (text == '') {
+        input.classList.toggle('invalid')
+
+        setTimeout(() => {
+            input.classList.remove('invalid')
+        }, 3000)
+    } else {
+
+        const newPlan = {
+            plan_name: text,
+            done: false
+        }
+
+        input.value = ''
+
+        plans.push(newPlan)
+        saveState()
+
+        init()
+
     }
-
-    input.value = ''
-
-    plans.push(newPlan)
-    saveState()
-
-    init()
 
 }
 
