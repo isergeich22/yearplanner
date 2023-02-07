@@ -53,7 +53,7 @@ function renderCards() {
         for (i = 0; i <= plans.length; i++) {
             if (plans[i].done != true) {
                 html += `<div class="card">                     
-                            <input type="checkbox" name="done" id="done" data-plan="${plans[i].plan_name}">
+                            <input type="checkbox" name="done" id="done" ${plans[i].done} data-plan="${plans[i].plan_name}">
                             <p class="plan">${plans[i].plan_name}</p>
                             <button id="deleteButton" data-plan="${plans[i].plan_name}">X</button>
                         </div>`
@@ -66,27 +66,11 @@ function renderCards() {
             }
             section.innerHTML = html
             const checkbox = document.querySelectorAll('#done')
-            checkbox.forEach(el => {
-                el.addEventListener('change', (event) => {
-                    const content = event.target.dataset.plan
-                    const plan = plans.find(j => j.plan_name === content)
-                    let index = plans.indexOf(plan)
-                    if (index > -1) {
-                        if(plans[index].done == false) {
-                            plans[index].done = true
-                            const text = document.querySelector('.plan')
-                            text.classList.toggle('done')
-                            saveState()
-                        } else {
-                            plans[index].done = false
-                            const text = document.querySelector('.plan')
-                            text.classList.remove('done')
-                            saveState()
-                        }
-                    }                    
-                })
-            })
             const remove = document.querySelectorAll('#deleteButton')
+            const cards = document.querySelectorAll('.card')
+            cards.forEach(el => {
+                el.addEventListener('click', togglePlan)
+            })
             console.log(remove)
             remove.forEach(el => {
                 el.addEventListener('click', (event) => {
@@ -109,6 +93,18 @@ function renderCards() {
 
     }
 
+}
+
+function togglePlan(event) {
+    const text = event.target.dataset.plan
+    const plan = plans.find(p => p.plan_name === text)
+    console.log(plan)
+    console.log(event.target.checked)
+    plan.done = event.target.checked
+
+    saveState()
+
+    init()
 }
 
 function saveState() {
