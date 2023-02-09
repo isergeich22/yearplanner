@@ -21,6 +21,12 @@ body {
 h1 {
     font-family: var(--main-font);
     font-weight: bold;
+    margin: 0 auto 1rem;
+}
+
+h3 {
+    font-family: var(--main-font);
+    font-weight: 400;
 }
 
 .action {
@@ -74,6 +80,24 @@ h1 {
         .invalid {
             background: #ffb0b07a;
             transition: .3s ease-in;
+        }
+
+    .progress-bar {
+        margin: 1rem auto 0;
+        width: 50%;
+        border: 2px solid #000000ee;
+        border-radius: 8px;
+        height: 24px;
+    }
+
+        .progress-value {
+            font-family: var(--main-font);
+            color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px;
+            transition: .5s width;
         }
 
 .list {
