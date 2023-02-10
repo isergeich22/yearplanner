@@ -69,8 +69,8 @@ function renderCards() {
             section.innerHTML = html
             const checkbox = document.querySelectorAll('#done')
             const remove = document.querySelectorAll('#deleteButton')
-            const cards = document.querySelectorAll('.card')
-            cards.forEach(el => {
+            // const cards = document.querySelectorAll('.card')
+            checkbox.forEach(el => {
                 el.addEventListener('click', togglePlan)
             })
             // console.log(remove)
@@ -85,7 +85,7 @@ function renderCards() {
                         plans.splice(index, 1)
                     }
                     saveState()
-                    // init()
+                    init()
                 })
             })
             saveState()
