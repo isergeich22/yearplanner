@@ -154,3 +154,73 @@ h3 {
             color: #26ff31;
             text-decoration: line-through;
         }
+
+@media (max-width: 1800px) {
+    .action button {
+        height: 30px;
+        font-size: 1.2rem;
+    }
+
+    .card .plan {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 890px) {
+    .action button {
+        height: 30px;
+        font-size: .8rem;
+    }
+}
+
+@media (max-width: 620px) {
+    .card #deleteButton {
+        font-size: .6rem;
+    }
+
+    .card .plan {
+        font-size: .8rem;
+    }
+
+    .card #done {
+        width: 10px;
+        height: 10px;
+    }        
+
+    .action button {
+        height: 30px;
+        font-size: .6rem;
+    }
+
+        .progress-value {
+            font-size: 1rem;
+        }
+}
+
+@media (max-width: 320px) {
+    h1 {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: .8rem;
+    }
+
+    .progress-bar {
+        height: 20px;
+    }
+
+        .progress-value {
+            font-size: .8rem;
+        }
+}
+
+@media (max-width: 170px) {
+    .progress-bar {
+        height: 16px;
+    }
+
+        .progress-value {
+            font-size: .6rem;
+        }
+}
